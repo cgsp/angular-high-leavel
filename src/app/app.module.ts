@@ -2,11 +2,11 @@
  * @Author: John.Guan
  * @Date: 2018-06-02 13:07:05
  * @Last Modified by: John.Guan
- * @Last Modified time: 2018-06-02 13:16:06
+ * @Last Modified time: 2018-06-02 16:42:25
  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatSidenavModule } from '@angular/material';
+
 /*
  * 导入根路由
  */
@@ -24,13 +24,11 @@ import { CoreModule } from './core/core.module';
  */
 import { LoginModule } from './business/login/login.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
-    MatSidenavModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,

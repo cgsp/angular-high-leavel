@@ -1,0 +1,38 @@
+$color-f:#fff;
+$color-yellow:rgb(212, 184, 61);
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../../../assets/imgs/login-bg.jpg') center center no-repeat;
+    background-size: cover;
+    font-size: 0.8rem;
+    mat-card {
+        width: 20rem;
+        height: 20rem;
+        color: $color-f;
+        background-color: rgb(212, 184, 61);
+        mat-card-header {
+            margin-left: -8px;
+            font-size: 2rem;
+            letter-spacing: 0.2rem;
+        }
+        button {
+            color: $color-yellow;
+        }
+        mat-card-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+        mat-card-actions {
+            margin-right: 0px;
+        }
+    }
+}

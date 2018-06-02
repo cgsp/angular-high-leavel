@@ -2,7 +2,7 @@
  * @Author: John.Guan
  * @Date: 2018-06-02 13:17:50
  * @Last Modified by: John.Guan
- * @Last Modified time: 2018-06-02 13:18:31
+ * @Last Modified time: 2018-06-02 16:33:52
  */
 /*
  * 导入自己组件使用的模块或方法
@@ -14,19 +14,26 @@ import { loadSvgResources } from '../utils/svg-utils/svg.util';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /*
+ * 导入自己模块的路由
+ */
+import { coreRoutingModule1 } from './core-routing.module';
+/*
  * 导入自己模块的组件
  */
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
 /*
  * 导入公用模块
+;
  */
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     SharedModule,
+    coreRoutingModule1,
     HttpClientModule,
     BrowserAnimationsModule,
   ],
@@ -38,7 +45,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     SidebarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    DashboardComponent,
   ]
 })
 export class CoreModule {
