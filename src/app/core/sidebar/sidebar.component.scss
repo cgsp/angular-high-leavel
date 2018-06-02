@@ -1,3 +1,9 @@
 .sidebarBox {
     width: 200px;
+    mat-icon {
+        align-self: flex-start;
+    }
+    .mat-subheader {
+        line-height: 20px;
+    }
 }

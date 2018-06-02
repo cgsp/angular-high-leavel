@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { getDate } from 'date-fns';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,19 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  private items = [
-    '项目首页',
-  ]
-
-  private dayItems = [
-    '日历首页',
-    '月视图',
-    '周视图',
-    '日视图',
-  ]
+  today = 'day';
   constructor() { }
 
   ngOnInit() {
+    this.today = `day${getDate(new Date())}`;
   }
 
 }
