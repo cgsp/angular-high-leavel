@@ -1,8 +1,9 @@
+
 /*
  * @Author: John.Guan
  * @Date: 2018-06-02 13:07:05
  * @Last Modified by: John.Guan
- * @Last Modified time: 2018-06-02 16:42:25
+ * @Last Modified time: 2018-06-03 19:34:00
  */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,6 +24,8 @@ import { CoreModule } from './core/core.module';
  * 导入业务模块
  */
 import { LoginModule } from './business/login/login.module';
+import { ProjectModule } from './business/project/project.module';
+import { GspModule } from './business/gsp/gsp.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,8 @@ import { LoginModule } from './business/login/login.module';
     AppRoutingModule,
     CoreModule,
     LoginModule,
+    ProjectModule,
+    GspModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

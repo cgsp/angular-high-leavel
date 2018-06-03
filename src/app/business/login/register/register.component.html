@@ -1,0 +1,34 @@
+<mat-sidenav-container>
+  <div class="site">
+    <main>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>注册</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form class="example-form">
+            <mat-form-field class="eui-full-width">
+              <input type="text" matInput placeholder="请输入邮箱">
+              <span matSuffix>@qq.com</span>
+            </mat-form-field>
+            <mat-form-field class="eui-full-width">
+              <input type="text" matInput placeholder="请输入姓名">
+            </mat-form-field>
+            <mat-form-field class="eui-full-width">
+              <input type="password" matInput placeholder="请输入密码">
+            </mat-form-field>
+            <mat-form-field class="eui-full-width">
+              <input type="password" matInput placeholder="请输入确认密码">
+            </mat-form-field>
+            <mat-grid-list cols="8" rowHeight="1:1">
+              <mat-grid-tile *ngFor="let item of svgItems">
+                <mat-icon class="avatar" [svgIcon]="item"></mat-icon>
+              </mat-grid-tile>
+            </mat-grid-list>
+            <button mat-raised-button type="button" (click)="register()">注册</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </main>
+  </div>
+</mat-sidenav-container>

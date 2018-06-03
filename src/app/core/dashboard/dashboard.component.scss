@@ -1,7 +1,12 @@
-.site {
-    display: flex;
-    flex-direction: column;
-    main {
-        flex: 1;
+mat-sidenav-container {
+    &.my-dark-theme {
+        background-color: black;
+    }
+    .site {
+        display: flex;
+        flex-direction: column;
+        main {
+            flex: 1;
+        }
     }
 }

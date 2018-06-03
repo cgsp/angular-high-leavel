@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, SimpleChanges } from '@angular/core';
 
 
 @Component({
@@ -8,8 +8,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output('fatherListent') tellFathOpenNav: EventEmitter<any> = new EventEmitter;
-
+  @Output('fatherListent') tellFathOpenNav: EventEmitter<any> = new EventEmitter();
+  @Output('isDarkChange') isDarkChange: EventEmitter<any> = new EventEmitter();
+  @Input() isDark = false;
   constructor() {
 
   }
@@ -19,6 +20,14 @@ export class HeaderComponent implements OnInit {
 
   open() {
     this.tellFathOpenNav.emit();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+
+  }
+
+  onChange(event) {
+    this.isDarkChange.emit(event.checked);
   }
 
 }

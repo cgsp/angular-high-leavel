@@ -1,10 +1,10 @@
-<mat-sidenav-container>
+<mat-sidenav-container [ngClass]="{'my-dark-theme': isDark}">
   <mat-sidenav mode="push" #nav>
     <app-sidebar></app-sidebar>
   </mat-sidenav>
   <div class="site">
     <header>
-      <app-header (fatherListent)="nav.toggle()"></app-header>
+      <app-header (fatherListent)="nav.toggle()" [(isDark)]="isDark"></app-header>
     </header>
     <main>
       <router-outlet></router-outlet>
@@ -14,4 +14,3 @@
     </footer>
   </div>
 </mat-sidenav-container>
-
