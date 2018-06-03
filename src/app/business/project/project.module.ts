@@ -1,7 +1,10 @@
 import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { ProjectRoutingModule } from './project-routing.module';
-import { AComponent } from './a/a.component';
+import { ProjectListComponent } from './project-list/project-list.component';
+import { ProjectItemComponent } from './project-item/project-item.component';
+import { NewProjectComponent } from './new-project/new-project.component';
+import { InviteComponent } from './invite/invite.component';
 
 @NgModule({
   imports: [
@@ -9,8 +12,20 @@ import { AComponent } from './a/a.component';
     ProjectRoutingModule
   ],
   exports: [
-    AComponent
+    ProjectListComponent,
+    ProjectItemComponent,
+    NewProjectComponent,
+    InviteComponent,
   ],
-  declarations: [AComponent]
+  declarations: [
+    ProjectListComponent,
+    ProjectItemComponent,
+    NewProjectComponent,
+    InviteComponent
+  ],
+  entryComponents: [
+    NewProjectComponent,
+    InviteComponent
+  ]
 })
 export class ProjectModule { }

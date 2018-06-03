@@ -1,16 +1,20 @@
 import { DashboardComponent } from './../../core/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AComponent } from './a/a.component';
+import { ProjectListComponent } from './project-list/project-list.component';
 
 const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
       {
-        path: 'projectA',
-        component: AComponent
-      }
+        path: 'projectList',
+        component: ProjectListComponent
+      },
+      // {
+      //   path: 'project',
+      //   component: ProjectListComponent
+      // }
     ]
   },
 ]

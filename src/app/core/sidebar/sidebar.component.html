@@ -1,6 +1,6 @@
 <mat-nav-list dense class="sidebarBox">
   <h3 mat-subheader>项目</h3>
-  <mat-list-item>
+  <mat-list-item [routerLink]="[ '/dashboard/projectList']">
     <mat-icon mat-list-icon svgIcon="projects"></mat-icon>
     <span mat-line>项目首页</span>
     <span mat-line mat-subheader>查看所有项目</span>
@@ -8,13 +8,13 @@
   <h3 mat-subheader>日历</h3>
   <mat-list-item>
     <mat-icon mat-list-icon svgIcon="month"></mat-icon>
-    <span mat-line [routerLink]="[ '/dashboard/projectA']">月视图</span>
+    <span mat-line>月视图</span>
     <!-- <a >name</a> -->
     <span mat-line mat-subheader>按月查看任务</span>
   </mat-list-item>
-  <mat-list-item>
+  <mat-list-item [routerLink]="[ '/dashboard/gspB',{ key : 'value',key1 : 'value1' }]" [queryParams]="{ name : 'keatkeat' }" fragment="someWhere" >
     <mat-icon mat-list-icon svgIcon="week"></mat-icon>
-    <span mat-line [routerLink]="[ '/dashboard/gspB']">周视图</span>
+    <span mat-line>周视图</span>
     <span mat-line mat-subheader>按周查看任务</span>
   </mat-list-item>
   <mat-list-item>
